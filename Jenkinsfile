@@ -1,5 +1,4 @@
 node{
-  stages{
     stage('Build'){
       steps{
         echo "building"
