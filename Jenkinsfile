@@ -8,7 +8,7 @@ node{
       steps{
         echo "testing"
       }
-      if(current.Build=='Success'){
+      if(currentBuild.result=='Success'){
           echo " looks good"
       }else{
           echo "failed"
