@@ -1,21 +1,18 @@
-node {
-  stages {
-    stage('Build') {
-      steps {
-        echo 'Building...'
+node{
+  stages{
+    stage('Build'){
+      steps{
+        echo "building"
       }
     }
-    stage('Test') {
-      steps {
-        echo 'Testing...'
-        script {
-          if (currentBuild.result == 'SUCCESS') {
-            echo 'Looks good'
-          } else {
-            echo 'failed!'
-          }
-        }
+    stage('Test'){
+      steps{
+        echo "testing"
+      }
+      if(current.Build=='Success'){
+          echo " looks good"
+      }else{
+          echo "failed"
       }
     }
-  }
 }
