@@ -1,17 +1,16 @@
 node{
-    stage('Build'){
-      steps{
-        echo "building"
-      }
+    stage('Build'){      
+        echo "building the project!.."
     }
     stage('Test'){
-      steps{
-        echo "testing"
-      }
-      if(currentBuild.result=='Success'){
-          echo " looks good"
-      }else{
-          echo "failed"
-      }
+        echo "running test..."
+    }
+    stage('Deploy'){
+        echo "Deploying the application....."
+    }
+    if(currentBuild.currentResult=='Success'){
+        echo " looks good"
+    }else{
+        echo "failed"
     }
 }
